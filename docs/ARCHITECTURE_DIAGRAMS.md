@@ -13,8 +13,16 @@ For the best viewing experience, open the interactive diagrams with the Draw.io 
 | Version | Diagram File | Description |
 |---------|--------------|-------------|
 | **V1** | [MAF_Architecture_V1_Azure_Native.drawio](MAF_Architecture_V1_Azure_Native.drawio) | Full Azure ecosystem with Microsoft Foundry, APIM, Entra ID, Key Vault |
+| **V1.2** | [Microsoft_Foundry_Architecture_V2.drawio](Microsoft_Foundry_Architecture_V2.drawio) | **🆕 Microsoft Foundry 2026 Update** - Model Catalog (1,900+ models), Tool Catalog (1,400+ tools), Multi-model support, Workflow orchestration, Evaluation/Tracing/Red Teaming, External AI integrations (Vertex AI, Bedrock) |
 | **V2** | [MAF_Architecture_V2_APIM_Centric.drawio](MAF_Architecture_V2_APIM_Centric.drawio) | APIM as central hub with simplified MAF backend |
 | **V3** | [MAF_Architecture_V3_Cloud_Agnostic.drawio](MAF_Architecture_V3_Cloud_Agnostic.drawio) | Pluggable components for multi-cloud deployments |
+
+### 🆕 Architecture Documentation (April 2026)
+
+| Document | Description |
+|----------|-------------|
+| [ARCHITECTURE_V1_AZURE_NATIVE_V2.md](ARCHITECTURE_V1_AZURE_NATIVE_V2.md) | **Complete architecture documentation** for MAF 1.0 GA + Microsoft Foundry 2026. Includes deployment targets, multi-model catalog, tool catalog, workflow orchestration, external AI integrations, and comprehensive observability. |
+| [ARCHITECTURE_V1_UPDATE_PLAN.md](ARCHITECTURE_V1_UPDATE_PLAN.md) | Detailed planning document for the V1 → V2 architecture update. |
 
 ### 🆕 Feature & Decision Diagrams
 
