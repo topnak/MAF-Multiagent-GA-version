@@ -1,10 +1,151 @@
-# MAFGA Multi-Agent Architecture Diagrams
+# MAF 1.0 GA Multi-Agent Architecture Diagrams
 
 This document provides three versions of the architecture based on different deployment scenarios.
 
 ---
 
-## Version 1: Azure-Native (Foundry + APIM + Entra ID + KeyVault + MAF GA)
+## 📊 Interactive Draw.io Diagrams
+
+For the best viewing experience, open the interactive diagrams with the Draw.io extension in VS Code or at [app.diagrams.net](https://app.diagrams.net):
+
+### Architecture Version Diagrams
+
+| Version | Diagram File | Description |
+|---------|--------------|-------------|
+| **V1** | [MAF_Architecture_V1_Azure_Native.drawio](MAF_Architecture_V1_Azure_Native.drawio) | Full Azure ecosystem with Microsoft Foundry, APIM, Entra ID, Key Vault |
+| **V2** | [MAF_Architecture_V2_APIM_Centric.drawio](MAF_Architecture_V2_APIM_Centric.drawio) | APIM as central hub with simplified MAF backend |
+| **V3** | [MAF_Architecture_V3_Cloud_Agnostic.drawio](MAF_Architecture_V3_Cloud_Agnostic.drawio) | Pluggable components for multi-cloud deployments |
+
+### 🆕 Feature & Decision Diagrams
+
+| Diagram | File | Description |
+|---------|------|-------------|
+| **Microsoft Agent Framework (Official)** | [Microsoft_Agent_Framework_Features.drawio](Microsoft_Agent_Framework_Features.drawio) | **Official features** sourced from github.com/microsoft/agent-framework &amp; MS Learn. Shows 13+ agent types, 7 tool types, 15+ vector stores, workflows, A2A/MCP protocols, Python &amp; .NET packages, migration paths from Semantic Kernel &amp; AutoGen. |
+| **MAF 1.0 GA Complete Features** | [MAF_GA_Features_Complete.drawio](MAF_GA_Features_Complete.drawio) | **Comprehensive feature map** showing all 16 feature areas of MAF GA with color-coded sections: Orchestration, Agents, MCP Tools, A2A Communication, Memory, State Management, Skills, HITL, Security, Observability, Traffic Management, LLM Integration, API Layer, Deployment, Configuration, and Testing. |
+| **Azure APIM AI Gateway for Agentic Development** | [APIM_AI_Gateway_Agentic_Features.drawio](APIM_AI_Gateway_Agentic_Features.drawio) | Color-coded mapping of APIM AI Gateway features to MAF architecture components. Includes semantic caching, content safety, token metrics, MCP server export, A2A agent import, and summary table. |
+| **MAF Cloud Agnostic Features** | [MAF_Cloud_Agnostic_Features.drawio](MAF_Cloud_Agnostic_Features.drawio) | Complete cloud-agnostic architecture showing all pluggable interfaces (IApiGateway, IIdentityProvider, IChatClient, IStorageProvider, IObservabilityProvider) with multi-cloud options AND Azure-optimized advantages box. |
+
+### 📋 Microsoft Agent Framework Official Features
+
+**Source:** [github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework) | [MS Learn Docs](https://learn.microsoft.com/agent-framework)
+
+The official Microsoft Agent Framework is the successor to **Semantic Kernel** and **AutoGen**, combining:
+- Semantic Kernel's enterprise features (session management, type safety, filters, telemetry)
+- AutoGen's simple agent abstractions for multi-agent patterns
+- **NEW**: Graph-based workflows with HITL and time-travel capabilities
+
+**Key Capabilities:**
+| Category | Features |
+|----------|----------|
+| **Agents** | 13+ types: Foundry, Azure OpenAI, OpenAI, Anthropic, Gemini, Bedrock, Ollama, GitHub Copilot, Copilot Studio, A2A proxy, custom AIAgent |
+| **Tools** | Function Tools, Tool Approval (HITL), Code Interpreter, File Search, Web Search, Hosted MCP, Local MCP |
+| **Workflows** | Type-safe graph-based execution, checkpointing, streaming, time-travel debugging |
+| **Orchestration** | Sequential, Concurrent, Hand-off, Magentic patterns |
+| **Middleware** | Agent Run, Streaming, Function Calling, IChatClient middleware |
+| **Storage** | 15+ vector stores (Azure AI Search, Cosmos DB, Redis, Postgres, Pinecone, etc.) |
+| **Protocols** | A2A (Agent-to-Agent), MCP (Model Context Protocol), AG-UI |
+| **Observability** | OpenTelemetry, Purview, workflow events |
+| **Languages** | Python (`pip install agent-framework`) + .NET (`Microsoft.Agents.AI`) |
+
+### Key Features of New Diagrams
+
+#### 🎯 MAF 1.0 GA Complete Features Diagram (NEW)
+Comprehensive color-coded feature map with **16 feature areas**:
+
+| Color | Feature Area | Key Components |
+|-------|--------------|----------------|
+| 🔵 Blue | **Orchestration** | Magentic Orchestrator, Session Manager, Task Planner, Context Manager, Agent Router, Parallel Executor |
+| 🟢 Green | **Agents** | Agent Factory, Base Agent, 6 Pre-built Retail Agents, AGENT.md Spec Support |
+| 🟠 Orange | **MCP Tools** | MCP Client, 6 Pre-built Servers (Items, Localisation, Personalisation, Salesforce, Snowflake, Weather) |
+| 🩷 Pink | **A2A Communication** | A2A Client, A2A Server, JSON-RPC 2.0, Agent Cards |
+| 🩵 Cyan | **Memory & Storage** | In-Memory, Redis, Cosmos DB, Vector Similarity |
+| 🟡 Yellow-Green | **State Management** | Checkpoint Store, File/Blob Checkpoints, Resume/Rollback |
+| 💛 Yellow | **Skills** | Skill Registry, Skill Loader, SKILL.md Format |
+| 🟧 Deep Orange | **Human-in-the-Loop** | HITL Manager, Approval Workflows, Escalation Rules |
+| 🔴 Red | **Security** | RBAC, Audit Logging, Content Safety, Entra ID Auth |
+| 🟣 Purple | **Observability** | OpenTelemetry, Distributed Tracing, Langfuse, App Insights |
+| 💚 Light Green | **Traffic Management** | Traffic Router, A/B Testing, Canary Deployments |
+| 🔵 Indigo | **LLM Integration** | 7 Providers (Azure OpenAI, OpenAI, Anthropic, Gemini, Bedrock, Ollama, Foundry) |
+| 💜 Violet | **API Layer** | FastAPI, REST Routes, WebSocket, SSE |
+| 🩵 Light Blue | **Deployment** | Docker, Kubernetes, Container Apps, azd up, On-Premises |
+
+#### APIM AI Gateway Diagram Highlights:
+- **Traffic Mediation** (Blue): MCP Server Export, A2A Agent Import, Foundry Import
+- **Scalability** (Green): Semantic Caching, Token Rate Limiting, Token Quotas
+- **Security** (Pink): Content Safety, Shield Prompt (Jailbreak Detection), Custom Blocklists
+- **Resiliency** (Orange): Backend Load Balancing, Circuit Breaker
+- **Observability** (Purple): Token Metrics, Prompt/Completion Logging
+- **Summary Table**: Maps each APIM feature to MAF architecture component with benefits
+
+#### Cloud Agnostic Diagram Highlights:
+- **7 Pluggable Interface Layers**: Gateway, Identity, Secrets, LLM, Storage, Observability, Core
+- **Multi-Cloud Options**: Azure, AWS, GCP, and OSS alternatives for each layer
+- **Azure Advantages Box**: 8 key benefits including 30-50% cost reduction with semantic caching, zero secrets management, built-in AI safety, enterprise compliance
+
+---
+
+## 📈 Mermaid Diagrams
+
+For inline viewing in GitHub, VS Code, or any Markdown viewer with Mermaid support:
+
+**📄 [ARCHITECTURE_MERMAID.md](ARCHITECTURE_MERMAID.md)** - Complete Mermaid diagram collection including:
+
+- **V1 Azure-Native** - Full flowchart + sequence diagram
+- **V2 APIM-Centric** - Flowchart + mindmap of benefits
+- **V3 Cloud-Agnostic** - Flowchart + class diagram of interfaces + deployment config
+- **Architecture Comparison** - Side-by-side comparison of all versions
+
+### Quick Mermaid Preview - Architecture Overview
+
+```mermaid
+flowchart LR
+    subgraph V1["V1: Azure-Native"]
+        A1[Full Azure<br/>Ecosystem]
+    end
+    
+    subgraph V2["V2: APIM-Centric"]
+        A2[APIM as<br/>Central Hub]
+    end
+    
+    subgraph V3["V3: Cloud-Agnostic"]
+        A3[Pluggable<br/>Components]
+    end
+    
+    V1 -->|"Centralize Security"| V2
+    V2 -->|"Abstract Interfaces"| V3
+    
+    style V1 fill:#E3F2FD,stroke:#1565C0
+    style V2 fill:#E8F5E9,stroke:#2E7D32
+    style V3 fill:#F3E5F5,stroke:#7B1FA2
+```
+
+---
+
+### Diagram Features
+
+All diagrams include:
+- **Client Layer** - Web UI, Teams Bot, Mobile App, CLI
+- **Security & Identity** - Entra ID, Key Vault, RBAC, Managed Identity
+- **API Management** - Rate limiting, validation, policy engine
+- **MAF 1.0 GA Orchestration** - Magentic Orchestrator, HITL, Task Ledger
+- **Agent Layer** - 6 specialized agents with MCP tools
+- **Microsoft Foundry** - Azure OpenAI, AI Search, Content Safety
+- **Knowledge Layer** - Cosmos DB, Redis Cache, Blob Storage, AI Search
+- **MCP/A2A Layer** - Internal MCP endpoints, External A2A agents
+- **Observability** - Azure Monitor, Application Insights, Log Analytics, Langfuse, OpenTelemetry
+
+### Icon Library
+
+Diagrams use official Azure2 icons from draw.io including:
+- `img/lib/azure2/ai_machine_learning/AI_Studio.svg` - Microsoft Foundry
+- `img/lib/azure2/management_governance/Monitor.svg` - Azure Monitor
+- `img/lib/azure2/analytics/Log_Analytics_Workspaces.svg` - Log Analytics
+- `img/lib/azure2/devops/Application_Insights.svg` - Application Insights
+- `img/lib/azure2/ai_machine_learning/Content_Safety.svg` - Content Safety
+
+---
+
+## Version 1: Azure-Native (Microsoft Foundry + APIM + Entra ID + KeyVault + MAF GA)
 
 This version leverages the full Azure ecosystem for enterprise-grade deployment.
 

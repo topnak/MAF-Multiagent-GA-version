@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-16T00:00:00.000Z" agent="Copilot" version="24.0.0" type="device">
+  <diagram name="Microsoft Agent Framework Features" id="maf-official-features">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Microsoft Agent Framework - Official Features" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#0078D4;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="900" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Source: github.com/microsoft/agent-framework &amp; learn.microsoft.com/agent-framework" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="450" y="55" width="900" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 1: AGENTS (Green) -->
+        <!-- ============================================ -->
+        <mxCell id="agents_header" value="🤖 AGENTS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Agent Types Box -->
+        <mxCell id="agent_types" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_types_title" value="Agent Types &amp; Providers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="145" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_list" value="• Microsoft Foundry Agent&#xa;• Foundry Models (ChatCompletion / Responses)&#xa;• Foundry Anthropic (Claude via Foundry)&#xa;• Azure OpenAI (ChatCompletion / Responses)&#xa;• OpenAI (ChatCompletion / Responses)&#xa;• Anthropic (Direct Claude)&#xa;• A2A Agent (Remote Proxy)&#xa;• GitHub Copilot Agent&#xa;• Copilot Studio Agent&#xa;• Ollama (Local LLM)&#xa;• Bedrock (AWS)&#xa;• Gemini (Google)&#xa;• Custom AIAgent (Base Class)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="168" width="340" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 2: TOOLS (Orange) -->
+        <!-- ============================================ -->
+        <mxCell id="tools_header" value="🔧 TOOLS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F57C00;strokeColor=#E65100;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tools_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tools_title" value="Tool Types" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="430" y="145" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="tools_list" value="• Function Tools - Custom code agents can call&#xa;• Tool Approval - Human-in-the-loop approval&#xa;• Code Interpreter - Sandboxed code execution&#xa;• File Search - Search through uploaded files&#xa;• Web Search - Search the web for information&#xa;• Hosted MCP Tools - Microsoft Foundry hosted&#xa;• Local MCP Tools - Custom MCP servers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="430" y="168" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tools_subtitle" value="Agent as Function Tool" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="tools_agent" value="• AsAIFunction() - Convert agent to tool&#xa;• Agent Composition - Nested agent calls&#xa;• Inner/Outer Agent Pattern" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="430" y="288" width="340" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 3: WORKFLOWS (Blue) -->
+        <!-- ============================================ -->
+        <mxCell id="workflows_header" value="🔄 WORKFLOWS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565C0;strokeColor=#0D47A1;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="workflows_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="800" y="140" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="workflows_title" value="Graph-Based Workflow Engine" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="145" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="workflows_list" value="Key Features:&#xa;• Type Safety - Strong typing for message flow&#xa;• Flexible Control Flow - Conditional routing&#xa;• External Integration - APIs &amp; HITL&#xa;• Checkpointing - Save/resume workflow states&#xa;• Multi-Agent Orchestration&#xa;&#xa;Core Concepts:&#xa;• Executors - Processing units (agents/functions)&#xa;• Edges - Connections with conditions&#xa;• Events - Lifecycle &amp; custom events&#xa;• Supersteps - Managed execution&#xa;• Streaming &amp; Non-streaming modes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="168" width="340" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 4: ORCHESTRATION PATTERNS (Indigo) -->
+        <!-- ============================================ -->
+        <mxCell id="orch_header" value="🎭 ORCHESTRATION PATTERNS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3949AB;strokeColor=#283593;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="100" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="orch_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3949AB;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="140" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_title" value="Multi-Agent Orchestration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#283593;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="145" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_list" value="Built-in Patterns:&#xa;• Sequential - One agent after another&#xa;• Concurrent - Parallel agent execution&#xa;• Hand-off - Transfer between agents&#xa;• Magentic - Dynamic orchestration&#xa;&#xa;Workflow Capabilities:&#xa;• Time-travel - Replay/debug flows&#xa;• Parallel Processing&#xa;• Dynamic Execution Paths&#xa;• Agent Coordination&#xa;• State Synchronization" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="168" width="340" height="185" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 5: MIDDLEWARE (Purple) -->
+        <!-- ============================================ -->
+        <mxCell id="middleware_header" value="⚙️ MIDDLEWARE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7B1FA2;strokeColor=#4A148C;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="middleware_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="middleware_title" value="Flexible Middleware System" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#4A148C;" vertex="1" parent="1">
+          <mxGeometry x="50" y="425" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="middleware_list" value="Middleware Types:&#xa;• Agent Run Middleware - Intercept agent runs&#xa;• Agent Run Streaming Middleware&#xa;• Function Calling Middleware - Tool invocations&#xa;• IChatClient Middleware - Inference requests&#xa;&#xa;Capabilities:&#xa;• Logging &amp; Monitoring&#xa;• Security Validation&#xa;• Error Handling&#xa;• Result Transformation&#xa;• Chained Middleware Pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="448" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 6: MEMORY & STATE (Cyan) -->
+        <!-- ============================================ -->
+        <mxCell id="memory_header" value="💾 MEMORY &amp; STATE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00838F;strokeColor=#006064;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="380" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="memory_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00838F;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="420" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="memory_title" value="State Management &amp; Persistence" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#006064;" vertex="1" parent="1">
+          <mxGeometry x="430" y="425" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory_list" value="Chat History Providers:&#xa;• In-Memory (Released)&#xa;• Cosmos DB (Preview)&#xa;&#xa;AI Context Providers:&#xa;• Chat History Memory Provider&#xa;• Text Search Provider&#xa;• Neo4j GraphRAG Provider&#xa;&#xa;Session Management:&#xa;• AgentSession for state&#xa;• Multi-turn conversations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="430" y="448" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 7: VECTOR STORES (Teal) -->
+        <!-- ============================================ -->
+        <mxCell id="vector_header" value="🔍 VECTOR STORES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00796B;strokeColor=#004D40;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="380" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vector_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="800" y="420" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="vector_title" value="Vector Database Integrations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#004D40;" vertex="1" parent="1">
+          <mxGeometry x="810" y="425" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vector_list" value="Microsoft.Extensions.VectorData.Abstractions:&#xa;• Azure AI Search (.NET &amp; Python)&#xa;• Cosmos DB MongoDB vCore&#xa;• Cosmos DB NoSQL&#xa;• Redis (.NET &amp; Python)&#xa;• Postgres / Neon Serverless&#xa;• SQL Server / SQLite&#xa;• Pinecone / Qdrant / Weaviate&#xa;• Elasticsearch / MongoDB&#xa;• Oracle / Couchbase&#xa;• In-Memory (Development)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="448" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 8: HOSTING & DEPLOYMENT (Light Blue) -->
+        <!-- ============================================ -->
+        <mxCell id="hosting_header" value="☁️ HOSTING &amp; DEPLOYMENT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0288D1;strokeColor=#01579B;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="380" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hosting_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="420" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="hosting_title" value="Deployment Options" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#01579B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="425" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hosting_list" value="Hosting Packages:&#xa;• Azure Functions (Durable Tasks)&#xa;• A2A Hosting (AspNetCore)&#xa;• AG-UI Hosting (AspNetCore)&#xa;• OpenAI-Compatible Hosting&#xa;• Generic Hosting (DI Registration)&#xa;&#xa;Deployment Targets:&#xa;• Microsoft Foundry Hosted Agents&#xa;• Azure Container Apps&#xa;• Kubernetes&#xa;• Docker Containers&#xa;• Local Development (Foundry Local)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="448" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 9: PROTOCOLS (Pink) -->
+        <!-- ============================================ -->
+        <mxCell id="protocols_header" value="🔗 PROTOCOLS &amp; INTEGRATIONS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C2185B;strokeColor=#880E4F;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="protocols_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#C2185B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="protocols_title" value="Interoperability" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#880E4F;" vertex="1" parent="1">
+          <mxGeometry x="50" y="665" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="protocols_list" value="A2A Protocol:&#xa;• Agent-to-Agent communication&#xa;• Remote agent proxies&#xa;• Task protocol support&#xa;• Agent Cards&#xa;&#xa;MCP (Model Context Protocol):&#xa;• Local MCP servers&#xa;• Hosted MCP Tools (Foundry)&#xa;• MCP client integration&#xa;&#xa;AG-UI:&#xa;• Agent GUI integration (Preview)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="688" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 10: OBSERVABILITY (Deep Purple) -->
+        <!-- ============================================ -->
+        <mxCell id="obs_header" value="📊 OBSERVABILITY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#512DA8;strokeColor=#311B92;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="620" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="obs_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#512DA8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="660" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_title" value="Built-in Telemetry" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#311B92;" vertex="1" parent="1">
+          <mxGeometry x="430" y="665" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_list" value="OpenTelemetry Integration:&#xa;• Distributed Tracing&#xa;• Monitoring&#xa;• Debugging&#xa;&#xa;Purview Integration:&#xa;• Compliance logging&#xa;• Data governance&#xa;&#xa;Workflow Events:&#xa;• Lifecycle events&#xa;• Executor events&#xa;• Custom events" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="430" y="688" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 11: DEVELOPER EXPERIENCE (Amber) -->
+        <!-- ============================================ -->
+        <mxCell id="devex_header" value="👩‍💻 DEVELOPER EXPERIENCE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF8F00;strokeColor=#FF6F00;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="620" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="devex_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FF8F00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="800" y="660" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="devex_title" value="Tools &amp; Packages" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#FF6F00;" vertex="1" parent="1">
+          <mxGeometry x="810" y="665" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="devex_list" value="DevUI (Preview):&#xa;• Interactive developer UI&#xa;• Agent testing &amp; debugging&#xa;• Workflow visualization&#xa;&#xa;Declarative Agents:&#xa;• YAML/JSON configuration&#xa;• agent.yaml support&#xa;• Declarative MCP integration&#xa;&#xa;AF Labs:&#xa;• Benchmarking&#xa;• Reinforcement Learning&#xa;• Research initiatives" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="688" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 12: PLATFORM SUPPORT (Blue Grey) -->
+        <!-- ============================================ -->
+        <mxCell id="platform_header" value="🌐 PLATFORM SUPPORT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#546E7A;strokeColor=#37474F;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="620" width="360" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="platform_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#546E7A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="660" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="platform_title" value="Multi-Language Framework" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#37474F;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="665" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="platform_list" value="Languages:&#xa;• Python - pip install agent-framework&#xa;• C# / .NET - Microsoft.Agents.AI&#xa;• Consistent APIs across languages&#xa;&#xa;Package Distribution:&#xa;• PyPI (Python packages)&#xa;• NuGet (.NET packages)&#xa;&#xa;Resources:&#xa;• MS Learn Documentation&#xa;• GitHub Samples&#xa;• Discord Community&#xa;• Weekly Office Hours" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="688" width="340" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 13: PYTHON PACKAGES (Blue Accent) -->
+        <!-- ============================================ -->
+        <mxCell id="python_header" value="🐍 PYTHON PACKAGES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976D2;strokeColor=#0D47A1;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="860" width="560" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="python_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="560" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="python_list" value="Core: core, orchestrations, declarative&#xa;Providers: foundry, foundry_local, openai, anthropic, claude, bedrock, gemini, ollama&#xa;Protocols: a2a, ag-ui, mcp (via Foundry)&#xa;Storage: azure-cosmos, redis, azure-ai-search, mem0&#xa;Hosting: azurefunctions, durabletask&#xa;UI &amp; Tools: devui, chatkit, github_copilot, copilotstudio&#xa;Compliance: purview&#xa;Experimental: lab (benchmarking, RL, research)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="910" width="540" height="130" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 14: .NET PACKAGES (Green Accent) -->
+        <!-- ============================================ -->
+        <mxCell id="dotnet_header" value="🔷 .NET PACKAGES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#388E3C;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="860" width="560" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dotnet_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="900" width="560" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dotnet_list" value="Core: Microsoft.Agents.AI, Microsoft.Agents.AI.Abstractions&#xa;Providers: Foundry, OpenAI, Anthropic, GitHub.Copilot, CopilotStudio&#xa;Workflows: Workflows, Workflows.Generators, Workflows.Declarative(.Foundry, .Mcp)&#xa;Hosting: Hosting, Hosting.A2A(.AspNetCore), Hosting.AGUI.AspNetCore, Hosting.AzureFunctions, Hosting.OpenAI&#xa;Storage: CosmosNoSql, AzureAI.Persistent&#xa;Compliance: Purview, Mem0&#xa;UI: DevUI, AGUI&#xa;Durable: DurableTask" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="630" y="910" width="540" height="130" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SECTION 15: MIGRATION PATHS (Yellow) -->
+        <!-- ============================================ -->
+        <mxCell id="migration_header" value="🔀 MIGRATION &amp; HERITAGE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBC02D;strokeColor=#F9A825;fontColor=#333333;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="860" width="340" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="migration_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#FBC02D;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="900" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="migration_list" value="Successor to Semantic Kernel &amp; AutoGen&#xa;&#xa;From Semantic Kernel:&#xa;• Enterprise features, filters, telemetry&#xa;• Session-based state management&#xa;• Type safety, embeddings support&#xa;&#xa;From AutoGen:&#xa;• Simple agent abstractions&#xa;• Multi-agent patterns&#xa;&#xa;New in Agent Framework:&#xa;• Graph-based workflows&#xa;• Robust state management for HITL" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#333333;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="910" width="320" height="135" as="geometry" />
+        </mxCell>
+        
+        <!-- ============================================ -->
+        <!-- SUMMARY STATISTICS BAR -->
+        <!-- ============================================ -->
+        <mxCell id="summary_bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#37474F;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1070" width="1500" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="summary_title" value="📈 MICROSOFT AGENT FRAMEWORK - KEY METRICS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1075" width="650" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Stats -->
+        <mxCell id="stat1" value="13+&#xa;Agent Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E7D32;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat2" value="7&#xa;Tool Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F57C00;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat3" value="15+&#xa;Vector Stores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00796B;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat4" value="4&#xa;Orchestration Patterns" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3949AB;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1103" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat5" value="4&#xa;Middleware Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7B1FA2;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat6" value="Python&#xa;&amp; .NET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#546E7A;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1103" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat7" value="A2A + MCP&#xa;Protocols" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C2185B;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat8" value="Workflows&#xa;Graph-Based" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565C0;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat9" value="HITL&#xa;Support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF8F00;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1103" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat10" value="OpenTelemetry&#xa;Built-in" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#512DA8;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat11" value="Checkpointing&#xa;&amp; Time-Travel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00838F;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="1103" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat12" value="9.5K+ ⭐&#xa;GitHub Stars" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0288D1;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stat13" value="127+&#xa;Contributors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="1103" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Footer -->
+        <mxCell id="footer" value="Source: https://github.com/microsoft/agent-framework | https://learn.microsoft.com/agent-framework | MIT License" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1160" width="650" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
